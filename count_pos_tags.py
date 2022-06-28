@@ -7,10 +7,10 @@ def count_pos_tags(reader: BracketParseCorpusReader) -> pd.DataFrame:
     Generate DataFrame of Parts-of-Speech tags in a corpus
 
     Args:
-        reader (BracketParseCorpusReader): _description_
+        reader (BracketParseCorpusReader): BracketParseCorpusReader object from a file
 
     Returns:
-        pd.DataFrame: _description_
+        pd.DataFrame: DataFrame of POS counts
     """
     pos_counter = dict()
 
