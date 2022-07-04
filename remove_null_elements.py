@@ -52,7 +52,8 @@ def remove_null_elements(input_string):
     tree_processed = nltk.Tree.fromstring(removed_invalid_constituents)
     collapse_unary(tree_processed)
     
-    # Step 4: Remove the head branches of the collapsed unaries e.g. NP + VB -> VB
+    # Step 4: Remove the parent constituent that has been collapsed of the collapsed unaries e.g. NP+VB -> VB
+    # Note: Anything to the left of the '+' is the parent
     final_preprocess = ' '.join(str(tree_processed).split())
     
     # Step 5: Remove the parent constituent that has been collapsed
