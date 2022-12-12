@@ -42,7 +42,7 @@ def remove_none(input_str: str) -> str:
                 ):  # Extra space to account for ') (NP....)
                     res += input_str[i + 2 :]
                     break
-                elif input_str[i] == ")":  # Else it will be: ))
+                if input_str[i] == ")":  # Else it will be: ))
                     res += input_str[i + 1 :]
                     break
         input_str = res
