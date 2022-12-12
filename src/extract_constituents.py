@@ -1,3 +1,8 @@
+"""
+This module contains the function to extract constituents from a Constituency Treebank
+"""
+
+
 def get_constituents(sentence: str, brackets: str = "()") -> list:
     """
     Uses a sliding window to extract the constituents of a sentence in treebank format.
