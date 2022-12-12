@@ -12,17 +12,17 @@ def count_pos_tags(reader: BracketParseCorpusReader) -> pd.DataFrame:
     Returns:
         pd.DataFrame: DataFrame of POS counts
     """
-    pos_counter = dict()
+    pos_counter = {}
 
     for word, tag in reader.tagged_words():
         if tag in pos_counter:
             pos_counter[tag] += 1
         else:
             pos_counter[tag] = 1
-    df = pd.DataFrame(pos_counter, index=["counts"])
-    df = (
-        df.T.sort_values(by="counts", ascending=False)
+    df_pos_counter = pd.DataFrame(pos_counter, index=["counts"])
+    df_pos_counter = (
+        df_pos_counter.T.sort_values(by="counts", ascending=False)
         .reset_index()
         .rename(columns={"index": "pos_tag"})
     )
-    return df
+    return df_pos_counter
