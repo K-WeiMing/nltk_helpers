@@ -12,15 +12,15 @@ def zip_data(dep_tbank_path: str, const_tbank_path: str) -> List[list]:
     Returns:
         List[list]: Output of dependency treebank zipped with constituency treebank for each token [[(Dependency tbank), (word, XPOS)], ...]
     """
-    output = list()
+    output = []
 
     # Parse the Dependency Treebank
-    with open(dep_tbank_path, "r") as f:
-        dep_tbank = f.read().strip().splitlines()
+    with open(dep_tbank_path, "r") as file:
+        dep_tbank = file.read().strip().splitlines()
 
     # Parse the Constituency Treebank
-    with open(const_tbank_path, "r") as f:
-        const_tbank = f.read().strip().splitlines()
+    with open(const_tbank_path, "r") as file:
+        const_tbank = file.read().strip().splitlines()
 
     # Init sentence index for constituency Treebank
     sentence_index_c = 0
@@ -51,7 +51,7 @@ def swap_pos_tag(zipped_tbank: List[list]) -> list:
     Returns:
         list: list format for writing to a file
     """
-    output = list()
+    output = []
 
     # Parse through the list
     for tags in zipped_tbank:
@@ -93,5 +93,5 @@ if __name__ == "__main__":
     treebank = zip_data(args.dep_tbank, args.const_tbank)
     treebank = swap_pos_tag(treebank)
 
-    with open(args.output_file, "w") as f:
-        f.writelines(t + "\n" for t in treebank)
+    with open(args.output_file, "w") as file:
+        file.writelines(tree + "\n" for tree in treebank)
