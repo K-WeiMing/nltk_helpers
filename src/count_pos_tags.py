@@ -14,7 +14,7 @@ def count_pos_tags(reader: BracketParseCorpusReader) -> pd.DataFrame:
     """
     pos_counter = {}
 
-    for word, tag in reader.tagged_words():
+    for _, tag in reader.tagged_words():
         if tag in pos_counter:
             pos_counter[tag] += 1
         else:
