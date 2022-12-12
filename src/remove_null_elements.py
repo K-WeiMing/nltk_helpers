@@ -3,15 +3,13 @@ import nltk
 from nltk.tree import collapse_unary
 
 """
-Example input from Kethu dataset
-
+Example input from Kethu dataset:
 (S (NP-SBJ (NP (NN Jenis) (NN monyet)) (SBAR (IN yang) 
 (S (NP-SBJ-1 (-NONE- *)) (VP (VB dikerahkan) (NP (-NONE- *-1)) 
 (NP-LGS (NN pemkot)))))) (VP (VP (VB berbadan) (ADJP (JJ besar))) 
 (, ,) (VP (VB berekor) (ADJP (JJ panjang))) (, ,) 
 (CC dan) (VP (VB memiliki) (NP (NN wajah) (SBAR (-NONE- 0) 
 (S (NP-SBJ (-NONE- *)) (VP (VB berwarna) (ADJP (JJ hitam)))))))) (. .))
-
 """
 
 
@@ -22,7 +20,7 @@ def remove_none(input_str: str) -> str:
         input_str (str): Input constituency treebank in string format
 
     Returns:
-        _type_: Output constituency treebank without null elements
+        str: Output constituency treebank without null elements
     """
 
     none_count = input_str.count("(-NONE- ")
@@ -82,7 +80,8 @@ def remove_null_elements(input_string: str) -> str:
     tree_processed = nltk.Tree.fromstring(removed_invalid_constituents)
     collapse_unary(tree_processed)
 
-    # Step 4: Remove the parent constituent that has been collapsed of the collapsed unaries e.g. NP+VB -> VB
+    # Step 4: Remove the parent constituent that has been collapsed
+    # of the collapsed unaries e.g. NP+VB -> VB
     # Note: Anything to the left of the '+' is the parent
     final_preprocess = " ".join(
         str(tree_processed).split()
