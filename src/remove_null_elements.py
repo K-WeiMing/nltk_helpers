@@ -4,11 +4,11 @@ from nltk.tree import collapse_unary
 
 """
 Example input from Kethu dataset:
-(S (NP-SBJ (NP (NN Jenis) (NN monyet)) (SBAR (IN yang) 
-(S (NP-SBJ-1 (-NONE- *)) (VP (VB dikerahkan) (NP (-NONE- *-1)) 
-(NP-LGS (NN pemkot)))))) (VP (VP (VB berbadan) (ADJP (JJ besar))) 
-(, ,) (VP (VB berekor) (ADJP (JJ panjang))) (, ,) 
-(CC dan) (VP (VB memiliki) (NP (NN wajah) (SBAR (-NONE- 0) 
+(S (NP-SBJ (NP (NN Jenis) (NN monyet)) (SBAR (IN yang)
+(S (NP-SBJ-1 (-NONE- *)) (VP (VB dikerahkan) (NP (-NONE- *-1))
+(NP-LGS (NN pemkot)))))) (VP (VP (VB berbadan) (ADJP (JJ besar)))
+(, ,) (VP (VB berekor) (ADJP (JJ panjang))) (, ,)
+(CC dan) (VP (VB memiliki) (NP (NN wajah) (SBAR (-NONE- 0)
 (S (NP-SBJ (-NONE- *)) (VP (VB berwarna) (ADJP (JJ hitam)))))))) (. .))
 """
 
