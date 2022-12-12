@@ -15,11 +15,11 @@ def zip_data(dep_tbank_path: str, const_tbank_path: str) -> List[list]:
     output = []
 
     # Parse the Dependency Treebank
-    with open(dep_tbank_path, "r") as file:
+    with open(dep_tbank_path, "r", encoding="utf8") as file:
         dep_tbank = file.read().strip().splitlines()
 
     # Parse the Constituency Treebank
-    with open(const_tbank_path, "r") as file:
+    with open(const_tbank_path, "r", encoding="utf8") as file:
         const_tbank = file.read().strip().splitlines()
 
     # Init sentence index for constituency Treebank
@@ -93,5 +93,5 @@ if __name__ == "__main__":
     treebank = zip_data(args.dep_tbank, args.const_tbank)
     treebank = swap_pos_tag(treebank)
 
-    with open(args.output_file, "w") as file:
+    with open(args.output_file, "w", encoding="utf8") as file:
         file.writelines(tree + "\n" for tree in treebank)
