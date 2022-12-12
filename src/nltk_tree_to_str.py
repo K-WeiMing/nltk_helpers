@@ -1,5 +1,5 @@
 """
-This module contains the function to convert a loaded treebank to string format
+This python script contains the function to convert a loaded treebank to string format
 """
 import nltk
 

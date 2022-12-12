@@ -1,5 +1,5 @@
 """
-This module contains the function to generate a
+This python script contains the function to generate a
 DataFrame containing the Parts-Of-Speech of a Constituency Treebank
 """
 

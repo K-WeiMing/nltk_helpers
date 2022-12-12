@@ -1,5 +1,5 @@
 """
-This module contains the script to remove null elements from the a Constituency Treebank
+This python script contains the script to remove null elements from the a Constituency Treebank
 It can be used as a checker to handle any unforeseen errors in your loaded Treebank
 
 Example input from Kethu dataset:

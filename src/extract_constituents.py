@@ -1,5 +1,5 @@
 """
-This module contains the function to extract constituents from a Constituency Treebank
+This python script contains the function to extract constituents from a Constituency Treebank
 """
 
 
