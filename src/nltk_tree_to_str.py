@@ -1,9 +1,7 @@
 import nltk
 
-Treebank: nltk.Tree
 
-
-def convert_tree_to_str(tree_bank: Treebank) -> str:
+def convert_tree_to_str(tree_bank: nltk.Tree) -> str:
     """
     Converts Treebank object to string representation
 
