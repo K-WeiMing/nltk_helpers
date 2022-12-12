@@ -1,5 +1,5 @@
 """
-This module contains the function to swap the UPOS tags in the dependency 
+This module contains the function to swap the UPOS tags in the dependency
 Treebank to XPOS from the constituency Treebank
 """
 from typing import List
