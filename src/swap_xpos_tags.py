@@ -1,3 +1,7 @@
+"""
+This module contains the function to swap the UPOS tags in the dependency 
+Treebank to XPOS from the constituency Treebank
+"""
 from typing import List
 import nltk
 
@@ -10,7 +14,8 @@ def zip_data(dep_tbank_path: str, const_tbank_path: str) -> List[list]:
         const_tbank_path (_type_): File path to constituent treebank
 
     Returns:
-        List[list]: Output of dependency treebank zipped with constituency treebank for each token [[(Dependency tbank), (word, XPOS)], ...]
+        List[list]: Output of dependency treebank zipped with constituency
+        treebank for each token [[(Dependency tbank), (word, XPOS)], ...]
     """
     output = []
 

@@ -1,3 +1,6 @@
+"""
+This module contains the function to convert a loaded treebank to string format
+"""
 import nltk
 
 
@@ -6,7 +9,7 @@ def convert_tree_to_str(tree_bank: nltk.Tree) -> str:
     Converts Treebank object to string representation
 
     Args:
-        tb (Treebank): nltk.Tree object
+        tree_bank (Treebank): nltk.Tree object
 
     Returns:
         str: String representation (Treebank Format) from nltk.Tree object

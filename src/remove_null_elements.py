@@ -1,8 +1,7 @@
-import re
-import nltk
-from nltk.tree import collapse_unary
-
 """
+This module contains the script to remove null elements from the a Constituency Treebank
+It can be used as a checker to handle any unforeseen errors in your loaded Treebank
+
 Example input from Kethu dataset:
 (S (NP-SBJ (NP (NN Jenis) (NN monyet)) (SBAR (IN yang)
 (S (NP-SBJ-1 (-NONE- *)) (VP (VB dikerahkan) (NP (-NONE- *-1))
@@ -11,6 +10,11 @@ Example input from Kethu dataset:
 (CC dan) (VP (VB memiliki) (NP (NN wajah) (SBAR (-NONE- 0)
 (S (NP-SBJ (-NONE- *)) (VP (VB berwarna) (ADJP (JJ hitam)))))))) (. .))
 """
+
+
+import re
+import nltk
+from nltk.tree import collapse_unary
 
 
 def remove_none(input_str: str) -> str:
