@@ -3,7 +3,7 @@ This module contains the function to generate a
 DataFrame containing the Parts-Of-Speech of a Constituency Treebank
 """
 
-from nltk.corpus.reader import BracketParseCorpusReader
+from nltk.corpus import BracketParseCorpusReader
 import pandas as pd
 
 
