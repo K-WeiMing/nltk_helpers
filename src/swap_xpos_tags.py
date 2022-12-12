@@ -93,5 +93,5 @@ if __name__ == "__main__":
     treebank = zip_data(args.dep_tbank, args.const_tbank)
     treebank = swap_pos_tag(treebank)
 
-    with open(args.output_file, "w", encoding="utf8") as file:
-        file.writelines(tree + "\n" for tree in treebank)
+    with open(args.output_file, "w", encoding="utf8") as outfile:
+        outfile.writelines(tree + "\n" for tree in treebank)
