@@ -16,6 +16,6 @@ def get_constituents(sentence: str, brackets: str = "()") -> list:
                     constituency.append(sentence[i + 1 : j - 1])  # Remove extra space
                     break
 
-                elif sentence[j] == brackets[1]:
+                if sentence[j] == brackets[1]:
                     break
     return constituency
